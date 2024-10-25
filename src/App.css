@@ -1,0 +1,73 @@
+.container{
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+}
+.main{
+  flex-direction: column;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 0;
+}
+.box{
+  display: flex;
+  flex-basis: 32%;
+  margin: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.box img{
+  width: 100%;
+  height: 100%;
+}
+.box:hover{
+  transform: scale(1.3);
+  z-index: 2;
+}
+.layer{
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transition: 0.5s;
+}
+.layer:hover{
+  background: rgba(0,0,0,0.3);
+  
+}
+
+.layer h3{
+  bottom: 0;
+  left: 50%;
+  opacity: 0;
+  width: 100%;
+  color:azure;
+  transform: translateX(-50%);
+  position: absolute;
+  transition: 0.5s;
+}
+.layer h3:first-of-type {
+  bottom: 55%; /* Position for the first h3 (main name) */
+  left: 50%;
+}
+
+.layer h3:last-of-type {
+  bottom: 45%; /* Position for the second h3 (surname or extra name) */
+  left: 50%;
+}
+.layer:hover h3:first-of-type {
+  bottom: 45%;
+  opacity: 1;
+  
+}
+.layer:hover h3:last-of-type{
+  bottom: 35%;
+  opacity: 1;
+  
+}
